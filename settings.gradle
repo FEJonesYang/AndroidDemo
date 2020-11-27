@@ -1,0 +1,4 @@
+include ':fragmentdemo'
+include ':mvpdemo'
+include ':app'
+rootProject.name = "Demo"
