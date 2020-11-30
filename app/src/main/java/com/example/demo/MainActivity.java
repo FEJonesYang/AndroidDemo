@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG, "onSaveInstanceState...jsasahsjjghgyghuh");
+        Log.d(TAG, "onSaveInstanceState...");
     }
 
     @Override
