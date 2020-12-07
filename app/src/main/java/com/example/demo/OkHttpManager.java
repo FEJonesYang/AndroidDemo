@@ -20,8 +20,7 @@ import okhttp3.Response;
 /**
  * @author JonesYang
  * @Data 2020-11-30
- * @Function 实现 OkHttp 的简单封装，参考《Android 进阶之光》以及
- * https://blog.csdn.net/lmj623565791/article/details/47911083
+ * @Function 实现 OkHttp 的简单封装
  */
 public class OkHttpManager {
     // 单例 OkHttpManager
