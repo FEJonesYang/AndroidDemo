@@ -3,18 +3,14 @@ package com.example.contentprovider;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.contentprovider.db.DBHelper;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class LaunchActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,7 +19,6 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
     private EditText mEditText_UserName;
     private EditText mEditText_UserPassword;
 
-    //暂时存储用户信息
 
     private DBHelper mOpenHelper;
 
@@ -71,11 +66,15 @@ public class LaunchActivity extends AppCompatActivity implements View.OnClickLis
                 if (queryPeopleInDatabase()) {
                     intent = new Intent(this, LogonActivity.class);
                     startActivity(intent);
+                } else {
+                    Toast.makeText(this, "你还没有注册，请先注册！", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.btn_login:
                 intent = new Intent(this, LoginActivity.class);
                 startActivity(intent);
+                break;
+            default:
                 break;
         }
     }

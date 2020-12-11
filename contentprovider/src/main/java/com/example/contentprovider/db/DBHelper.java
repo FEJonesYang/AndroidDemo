@@ -34,6 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
      */
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        mSQLiteDatabase = getWritableDatabase();
     }
 
     /**
@@ -64,7 +65,6 @@ public class DBHelper extends SQLiteOpenHelper {
      * @return
      */
     public boolean insertPeopleById(String id, String password) {
-        mSQLiteDatabase = getReadableDatabase();
         //如果在数据库中存在，返回 false 插入失败
         if (queryPeopleInfoById(id, password)) {
             return false;
@@ -82,14 +82,14 @@ public class DBHelper extends SQLiteOpenHelper {
      * @return 默认没有查到
      */
     public boolean queryPeopleInfoById(String name, String password) {
-        // TODO：只根据 peopleId 查找，还没有验证密码的正确性
-        Cursor cursor = mSQLiteDatabase.rawQuery(queryPeopleById, new String[]{name.trim(), password.trim()});
+        // TODO：1、只根据 peopleId 查找，还没有验证密码的正确性 2、目前只有查找和插入功能
+        Cursor cursor = mSQLiteDatabase.rawQuery(queryPeopleById, new String[]{name});
         while (cursor.moveToNext()) {
-            if (name.equals(cursor.getColumnIndex("peopleId"))) {
+            if (name.equals(cursor.getString(cursor.getColumnIndex("peopleId")))) {
                 return true;
             }
         }
+        cursor.close();
         return false;
     }
-    //TODO：目前只有查找和增加功能
 }
