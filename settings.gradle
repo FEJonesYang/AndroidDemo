@@ -1,3 +1,4 @@
+include ':viewdemo'
 include ':contentprovider'
 include ':sharedpreferences'
 include ':fragmentdemo'
