@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--  自定义 View 的测试代码  -->
     <declare-styleable name="TestView">
         <attr name="test_boolean" format="boolean"></attr>
         <attr name="test_string" format="string"></attr>
@@ -10,5 +11,14 @@
             <enum name="bottom" value="2" />
         </attr>
         <attr name="test_dimension" format="dimension"></attr>
+    </declare-styleable>
+
+    <!-- 自定义圆形进度条的属性 -->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="android:textSize"></attr>
+        <attr name="android:progress"></attr>
+        <attr name="color" format="color"></attr>
+        <attr name="radius" format="dimension"></attr>
+        <attr name="line_width" format="dimension"></attr>
     </declare-styleable>
 </resources>
