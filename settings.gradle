@@ -1,3 +1,4 @@
+include ':aidldemo'
 include ':servicedemo'
 include ':viewdemo'
 include ':contentprovider'

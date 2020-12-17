@@ -1,4 +1,4 @@
-package com.example.servicedemo;
+package com.example.aidldemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.view.View;
 
-import com.example.servicedemo.services.MyService;
+import com.example.servicedemo.IMyAidlInterface;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,15 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-//            MyService.MyBinder myBinder = (MyService.MyBinder) service;
-//            Log.d(TAG, String.valueOf(myBinder.getProgress()));
             IMyAidlInterface iMyAidlInterface = IMyAidlInterface.Stub.asInterface(service);
             try {
                 iMyAidlInterface.showProgress();
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
-
         }
 
         @Override
@@ -57,15 +54,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start_service:
-                Intent intent = new Intent(this, MyService.class);
+                Intent intent = new Intent();
+                intent.setAction("com.example.myservice");
+                intent.setPackage("com.example.servicedemo");
                 startService(intent);
                 break;
             case R.id.stop_service:
-                Intent intent1 = new Intent(this, MyService.class);
+                Intent intent1 = new Intent("com.example.myservice");
+                intent1.setPackage("com.example.servicedemo");
                 stopService(intent1);
                 break;
             case R.id.bind_service:
-                Intent intent2 = new Intent(this, MyService.class);
+                Intent intent2 = new Intent("com.example.myservice");
+                intent2.setPackage("com.example.servicedemo");
                 bindService(intent2, serviceConnection, BIND_AUTO_CREATE);
                 break;
             case R.id.unbind_service:

@@ -4,7 +4,10 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
+import android.os.RemoteException;
 import android.util.Log;
+
+import com.example.servicedemo.IMyAidlInterface;
 
 public class MyService extends Service {
 
@@ -42,7 +45,16 @@ public class MyService extends Service {
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
         Log.d("TAG", "Service bind");
-        return new MyBinder();
+        return new IMyAidlInterface.Stub() {
+            @Override
+            public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
+            }
+
+            @Override
+            public void showProgress() throws RemoteException {
+                Log.d("TAG", String.valueOf(mI));
+            }
+        };
     }
 
     @Override
