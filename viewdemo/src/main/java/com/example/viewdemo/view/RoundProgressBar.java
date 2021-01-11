@@ -52,6 +52,7 @@ public class RoundProgressBar extends View {
         mTextSize = (int) typedArray.getDimension(R.styleable.RoundProgressBar_android_textSize, dp2px(16));
         mLineWidth = (int) typedArray.getDimension(R.styleable.RoundProgressBar_line_width, dp2px(3));
         mRadius = (int) typedArray.getDimension(R.styleable.RoundProgressBar_radius, dp2px(30));
+        String p = "199";
 
 
 //        //TODO: something wrong

@@ -47,7 +47,6 @@ public class TestProvider extends ContentProvider {
         mDbHelper = new DBHelper(mContext);
         mDatabase = mDbHelper.getWritableDatabase();
         mDatabase.execSQL("DELETE FROM user");
-
         return true;
     }
 
