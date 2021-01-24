@@ -1,3 +1,4 @@
+include ':mvvmdemo'
 include ':webviewdemo'
 include ':aidldemo'
 include ':servicedemo'

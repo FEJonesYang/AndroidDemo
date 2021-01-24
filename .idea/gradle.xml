@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/fragmentdemo" />
             <option value="$PROJECT_DIR$/mvpdemo" />
+            <option value="$PROJECT_DIR$/mvvmdemo" />
             <option value="$PROJECT_DIR$/servicedemo" />
             <option value="$PROJECT_DIR$/sharedpreferences" />
             <option value="$PROJECT_DIR$/viewdemo" />
