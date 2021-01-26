@@ -13,7 +13,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main_koylin);
         Log.d(TAG, "MainActivity2 create...");
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
