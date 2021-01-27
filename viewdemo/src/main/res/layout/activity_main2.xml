@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="355dp"
+    android:layout_height="251dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/shape_container_item">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shopCenter"
+        android:layout_width="match_parent"
+        android:layout_height="71.5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivChooseShop"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/ic_choose_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icShopBrand"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_shop"
+            app:layout_constraintLeft_toRightOf="@id/ivChooseShop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shopCenterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="12.5dp"
+            android:gravity="center_vertical"
+            android:text="爬爬"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/icShopBrand"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivEnterShop"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="17.5dp"
+            android:src="@drawable/ic_more_item"
+            app:layout_constraintLeft_toRightOf="@id/shopCenterName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/obtainDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13.5dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="领劵"
+            android:textColor="#F95555"
+            android:textSize="13sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivBrand"
+            android:layout_width="43dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10.5dp"
+            android:src="@drawable/ic_brand"
+            app:layout_constraintLeft_toLeftOf="@id/icShopBrand"
+            app:layout_constraintTop_toBottomOf="@id/icShopBrand" />
+
+        <TextView
+            android:id="@+id/discountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.5dp"
+            android:text="下单领券，可享满￥xxx减￥xx"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toRightOf="@id/ivBrand"
+            app:layout_constraintTop_toTopOf="@id/ivBrand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="355dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/line_horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemInfoDetail"
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/horizontalLine">
+
+        <ImageView
+            android:id="@+id/ivChooseItem"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40.5dp"
+            android:src="@drawable/ic_choose_item"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivItem"
+            android:layout_width="79dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/item"
+            app:layout_constraintStart_toEndOf="@+id/ivChooseItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="papa秋冬装男女童羽绒马甲宝宝羽"
+            android:textColor="#ff444444"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/ivItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/itemDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_item_imfo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toRightOf="@id/ivItem"
+            app:layout_constraintTop_toBottomOf="@id/itemName">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="three years,超级长的分类信息截断…"
+                android:textColor="#ff444444"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="5.66dp"
+                android:layout_height="5.66dp"
+                android:layout_marginRight="5.5dp"
+                android:src="@drawable/ic_item_detail" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDiscountAreaOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/itemName"
+            app:layout_constraintTop_toBottomOf="@id/itemDetail">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_choose_by_heart"
+                android:gravity="center"
+                android:text="心选"
+                android:textColor="#BE835C"
+                android:textSize="9.5sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_bonded_house"
+                android:gravity="center"
+                android:text="保税仓"
+                android:textColor="#66B0F4"
+                android:textSize="9.5sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_deliver_money"
+                android:gravity="center"
+                android:text="运费险"
+                android:textColor="#F95555"
+                android:textSize="9.5sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDiscountAreaSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/itemName"
+            app:layout_constraintTop_toBottomOf="@id/llDiscountAreaOne">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_common_info"
+                android:gravity="center"
+                android:text="仅会员"
+                android:textSize="9.5sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_common_info"
+                android:gravity="center"
+                android:text="不可用平台劵"
+                android:textSize="9.5sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/shape_common_info"
+                android:gravity="center"
+                android:text="限1件"
+                android:textSize="9.5sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDiscountByVIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/itemName"
+            app:layout_constraintTop_toBottomOf="@id/llDiscountAreaSec">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_discount_money"
+                android:gravity="center"
+                android:text="会员返 ¥5.1 "
+                android:textColor="#FAF0CC"
+                android:textSize="10sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_open_vip"
+                android:gravity="center_vertical"
+                android:paddingLeft="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="开通"
+                    android:textColor="#0A0A0A"
+                    android:textSize="10sp">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="4.25dp"
+                    android:layout_height="4.25dp"
+                    android:layout_marginLeft="1dp"
+                    android:src="@drawable/ic_show_vip" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDiscountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/itemName"
+            app:layout_constraintTop_toBottomOf="@id/llDiscountByVIP">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="¥"
+                android:textColor="#F95555"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="9999"
+                android:textColor="#F95555"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=".99"
+                android:textColor="#F95555"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.5dp"
+                android:gravity="center"
+                android:text="距加入降 ¥ 495.00"
+                android:textColor="#F95555"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_show_count_item"
+            android:gravity="center"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivItem">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="x"
+                android:textColor="#333333"
+                android:textSize="10sp" />
+
+            <TextView
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
