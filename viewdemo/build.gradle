@@ -38,4 +38,39 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    // retrofit 依赖
+    implementation 'com.squareup.retrofit2:retrofit:(insert latest version)'
+
+    // Gson 依赖
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    // OKHttp 依赖
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+
+    // Glide 依赖
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    // Dagger 依赖
+    implementation 'com.google.dagger:dagger:2.x'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.x'
+
+    // RxAndroid 依赖
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    // Because RxAndroid releases are few and far between, it is recommended you also
+    // explicitly depend on RxJava's latest version for bug fixes and new features.
+    // (see https://github.com/ReactiveX/RxJava/releases for latest 3.x.x version)
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+    // RxJava 依赖
+    implementation "io.reactivex.rxjava3:rxjava:3.x.y"
+
+    // EventBus 依赖
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+
 }
