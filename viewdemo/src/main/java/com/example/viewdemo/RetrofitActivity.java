@@ -9,9 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.viewdemo.interfaces.GitHubService;
 import com.example.viewdemo.model.ResponseResult;
-import com.google.gson.Gson;
 
-import java.util.List;
+import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -24,6 +23,7 @@ public class RetrofitActivity extends AppCompatActivity {
 
     private static final String uri = "https://wanandroid.com/wxarticle/chapters/json/";
     private static final String TAG = "RetrofitActivity";
+    OkHttpActivity mOkHttpActivity = new OkHttpActivity();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,7 +32,12 @@ public class RetrofitActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                query();
+                //query();
+                try {
+                    mOkHttpActivity.sendRequest(uri);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -54,7 +59,9 @@ public class RetrofitActivity extends AppCompatActivity {
         call.enqueue(new Callback<ResponseResult>() {
             @Override
             public void onResponse(Call<ResponseResult> call, Response<ResponseResult> response) {
-                Log.d(TAG, response.body().getData().toString());
+                Log.d(TAG, response.body().getErrorMsg());
+
+                //Log.d(TAG, response.body().getData().toString());
             }
 
             @Override
