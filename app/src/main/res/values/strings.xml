@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="star_remote_service">启动远程服务</string>
+</resources>

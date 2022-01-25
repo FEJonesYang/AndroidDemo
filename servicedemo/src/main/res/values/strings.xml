@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ServiceDemo</string>
+    <string name="start_service">启动服务</string>
+    <string name="stop_service">停止服务</string>
+    <string name="bind_service">绑定服务</string>
+    <string name="unbind_service">解绑服务</string>
+    <string name="obtain_text">获取数据</string>
+    <string name="bind_remote_service">启动远程服务</string>
+    <string name="unbind_remote_service">解除远程服务</string>
+    <string name="communicate_remote">远程通信</string>
+</resources>
